@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/fonts/themify-icons/themify-icons.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+  <body>
+  
+    <div id="s1" class="screen1">
+      <img src="./assets/img/Illustration Picture.svg" class="picture">
+  
+        <div class="container">
+          <h1 class="container_header">Welcome</h1>
+          <h3 class="container_des">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</h3>
+          <div class="cre__log">
+              <div class="btn">
+                  <button onclick="btn_create()" class="cre_log-create" >Create account</button>
+                  <button onclick="btn_login()" class="cre_log-login">Login</button>
+              </div>
+          </div>
+        </div>
+        <h1 class="footer_des">All Right Reserved @2021</h1>
+    
+
+    <!-- screen2 -->
+    <div id="s2" class="form-res">
+      <div class="register-title">
+          <h5 class="hello">Hello!!!</h5>
+          <h1 class="name-register">Register</h1>
+      </div>
+      <div onclick="btn_close()" class="close">
+          <i  class="ti-close"></i>
+      </div>
+      <div class="form-register">
+          <div class="form-user">
+              <input type="text" name="" placeholder="username/email" class="form-control" >
+              <div class="icon"><i class=" ti-lock"></i></div>    
+          </div>
+                          
+          <div class="form-user">
+              <input type="text" name="" placeholder="course" class="form-control">
+              <div class="icon"><i class=" ti-lock"></i></div>    
+          </div>
+
+          <div class="form-user">
+              <input type="text" name="" placeholder="password" class="form-control">
+              <div class="icon"><i class=" ti-eye"></i></div>    
+
+          </div>
+
+          <div class="form-user">
+              <input type="text" name="" placeholder="confirm password" class="form-control">
+              <div class="icon"><i class=" ti-eye"></i></div>   
+          </div>
+          
+         
+           <div class="register-btn">
+              <button class="register">Register</button>
+
+          </div>
+
+          <div class="footer-res">
+              <h1 class="footer-res-des">Already have account?</h1>
+              <h1 onclick="btn_login_footer()   " class="footer-res-des-login"> Login</h1>
+      
+          </div>
+      </div>
+    </div>
+   
+
+    <!-- screen 3 -->
+    <div id="s3" class="form-all">
+    <div class="login-title">
+        <h5 class="welcome">Welcome!!!</h5>
+        <h1 class="name-login">Customer</h1>
+    </div>
+    <div onclick="btn_close()" class="close-login">
+        <i class=" ti-close"></i>
+    </div>
+    <div class="form-login">
+        <div class="form-user">
+            <input type="text" name="" placeholder="username/email" class="form-control-login" >
+            <div class="icon-login"><i class="ti-lock"></i></div>    
+        </div>
+                        
+        <div class="form-user-login">
+            <input type="text" name="" placeholder="password" class="form-control-login">
+            <div class="icon-login"><i class="ti-eye"></i></div>    
+        </div>
+
+        <div class="tick-forgot-login">
+            <div>
+
+                <input type="checkbox" class="tick-remember" /> 
+                <h class="remember-text">Remember me</h>
+            </div>
+            <h class="forgot">Forgot password</h>
+        </div>
+        
+       
+         <div class="login-btn">
+            <button class="login">Login</button>
+
+        </div>
+    
+     
+
+    </div>
+    <div class="footer-login">
+        <h1 class="footer-login-des">Don't have an account?</h1>
+        <h1 onclick="btn_register_footer()" class="footer-login-des-register">Register</h1>
+    </div>
+    <div class="picture"></div>
+    
+    </div>
+
+  </body>
+
+
+  <!-- JS -->
+  <script>
+        function btn_create() {
+        document.getElementById("s2").style.display ="block";
+        document.getElementsByClassName("picture")[0].style.opacity="0.3"
+
+        }
+
+        function btn_login(){
+          document.getElementById("s3").style.display="block";
+          document.getElementsByClassName("picture")[0].style.opacity="0.3";
+        }
+
+        function btn_login_footer (){
+          document.getElementById("s3").style.display="block";
+          document.getElementById("s2").style.display="none";
+        }
+
+        function btn_close(){
+          document.getElementById("s2").style.display="none";
+          document.getElementById("s3").style.display="none";
+          document.getElementsByClassName("picture")[0].style.opacity="1"
+
+        }
+
+         function btn_register_footer(){
+          document.getElementById("s3").style.display="none";
+          document.getElementById("s2").style.display="block";
+          document.getElementsByClassName("picture")[0].style.opacity="0.3"
+        }
+  </script>
+</html>
